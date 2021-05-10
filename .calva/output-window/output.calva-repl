@@ -1,0 +1,1603 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.8.3"},cider/cider-nrepl {:mvn/version,"0.25.11"}}}' -A:run-x -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉user꞉>  (+ 1 2 3)
+3
+clj꞉user꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:0:0).
+; Can't take value of a macro: #'clojure.core/defn
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:12:3).
+; Unable to resolve symbol: greet in this context
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:0:0).
+; Unable to resolve symbol: main in this context
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:0:0).
+; Unable to resolve symbol: main in this context
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:14:1).
+; Unable to resolve symbol: main in this context
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:14:1).
+; Unable to resolve symbol: main in this context
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:14:1).
+; Unable to resolve symbol: main in this context
+clj꞉clojurust.java-analysis꞉> 
+; Execution error (IllegalStateException) at clojurust.java-analysis/eval7205 (REPL:14).
+; Attempting to call unbound fn: #'clojurust.java-analysis/-main
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:0:0).
+; Unable to resolve symbol: greet in this context
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:14:1).
+; Unable to resolve symbol: greet in this context
+clj꞉clojurust.java-analysis꞉> 
+; Evaluating file: java_analysis.clj
+; Syntax error (ArityException) compiling at (src/clojurust/java_analysis.clj:14:1).
+; Wrong number of args (0) passed to: clojurust.java-analysis/greet
+; Evaluation of file java_analysis.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉clojurust.java-analysis꞉> 
+clj꞉clojurust.java-analysis꞉> 
+""
+clj꞉clojurust.java-analysis꞉> 
+Hello, World!
+nil
+clj꞉clojurust.java-analysis꞉> 
+Hello, World!
+nil
+clj꞉clojurust.java-analysis꞉> 
+; Running all project tests…
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉clojurust.java-analysis꞉> 
+; Syntax error compiling at (src/clojurust/java_analysis.clj:0:0).
+; Unable to resolve symbol: reflect in this context
+clj꞉clojurust.java-analysis꞉> 
+; Evaluating file: test.clj
+; Syntax error compiling at (src/clojurust/test.clj:3:1).
+; No namespace: clojure.refer
+; Evaluation of file test.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉clojurust.java-analysis꞉> 
+clj꞉clojurust.test꞉> 
+; Syntax error compiling at (src/clojurust/test.clj:4:1).
+; No such namespace: r
+clj꞉clojurust.test꞉> 
+; Execution error (FileNotFoundException) at clojurust.test/eval7609 (REPL:3).
+; Could not locate clojure/refer__init.class, clojure/refer.clj or clojure/refer.cljc on classpath.
+clj꞉clojurust.test꞉> 
+; Evaluating file: test.clj
+; Syntax error (FileNotFoundException) compiling at (src/clojurust/test.clj:1:1).
+; Could not locate clojure/refer__init.class, clojure/refer.clj or clojure/refer.cljc on classpath.
+; Evaluation of file test.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉clojurust.test꞉> 
+clj꞉clojurust.test꞉> 
+; Execution error (FileNotFoundException) at clojurust.test/eval7624$loading (REPL:1).
+; Could not locate clojure/refer__init.class, clojure/refer.clj or clojure/refer.cljc on classpath.
+clj꞉clojurust.test꞉> 
+; Evaluating file: test.clj
+; Syntax error (FileNotFoundException) compiling at (src/clojurust/test.clj:1:1).
+; Could not locate clojure/refer__init.class, clojure/refer.clj or clojure/refer.cljc on classpath.
+; Evaluation of file test.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉clojurust.test꞉> 
+clj꞉clojurust.test꞉> 
+; Evaluating file: test.clj
+{:bases nil, :flags #{:public}, :members #{#clojure.reflect.Method{:name getClass, :return-type java.lang.Class, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name finalize, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.Throwable], :flags #{:protected}} #clojure.reflect.Constructor{:name java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name equals, :return-type boolean, :declaring-class java.lang.Object, :parameter-types [java.lang.Object], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name notifyAll, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name hashCode, :return-type int, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :native}} #clojure.reflect.Method{:name toString, :return-type java.lang.String, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name registerNatives, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:private :static :native}} #clojure.reflect.Method{:name clone, :return-type java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.CloneNotSupportedException], :flags #{:native :protected}} #clojure.reflect.Method{:name notify, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long int], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long], :exception-types [java.lang.InterruptedException], :flags #{:public :final :native}}}}
+clj꞉clojurust.test꞉> 
+; Evaluating file: test.clj
+{:bases nil, :flags #{:public}, :members #{#clojure.reflect.Method{:name getClass, :return-type java.lang.Class, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name finalize, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.Throwable], :flags #{:protected}} #clojure.reflect.Constructor{:name java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name equals, :return-type boolean, :declaring-class java.lang.Object, :parameter-types [java.lang.Object], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name notifyAll, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name hashCode, :return-type int, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :native}} #clojure.reflect.Method{:name toString, :return-type java.lang.String, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name registerNatives, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:private :static :native}} #clojure.reflect.Method{:name clone, :return-type java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.CloneNotSupportedException], :flags #{:native :protected}} #clojure.reflect.Method{:name notify, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long int], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long], :exception-types [java.lang.InterruptedException], :flags #{:public :final :native}}}}
+clj꞉clojurust.test꞉> 
+; Evaluating file: test.clj
+{:bases nil, :flags #{:public}, :members #{#clojure.reflect.Method{:name getClass, :return-type java.lang.Class, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name finalize, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.Throwable], :flags #{:protected}} #clojure.reflect.Constructor{:name java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name equals, :return-type boolean, :declaring-class java.lang.Object, :parameter-types [java.lang.Object], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name notifyAll, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name hashCode, :return-type int, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :native}} #clojure.reflect.Method{:name toString, :return-type java.lang.String, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name registerNatives, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:private :static :native}} #clojure.reflect.Method{:name clone, :return-type java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.CloneNotSupportedException], :flags #{:native :protected}} #clojure.reflect.Method{:name notify, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long int], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long], :exception-types [java.lang.InterruptedException], :flags #{:public :final :native}}}}
+clj꞉clojurust.test꞉> 
+; Evaluating file: test.clj
+{:bases nil, :flags #{:public}, :members #{#clojure.reflect.Method{:name getClass, :return-type java.lang.Class, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name finalize, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.Throwable], :flags #{:protected}} #clojure.reflect.Constructor{:name java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name equals, :return-type boolean, :declaring-class java.lang.Object, :parameter-types [java.lang.Object], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name notifyAll, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name hashCode, :return-type int, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :native}} #clojure.reflect.Method{:name toString, :return-type java.lang.String, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name registerNatives, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:private :static :native}} #clojure.reflect.Method{:name clone, :return-type java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.CloneNotSupportedException], :flags #{:native :protected}} #clojure.reflect.Method{:name notify, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long int], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long], :exception-types [java.lang.InterruptedException], :flags #{:public :final :native}}}}
+clj꞉clojurust.test꞉> 
+; Evaluating file: test.clj
+{:bases nil, :flags #{:public}, :members #{#clojure.reflect.Method{:name getClass, :return-type java.lang.Class, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name finalize, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.Throwable], :flags #{:protected}} #clojure.reflect.Constructor{:name java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name equals, :return-type boolean, :declaring-class java.lang.Object, :parameter-types [java.lang.Object], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name notifyAll, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name hashCode, :return-type int, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :native}} #clojure.reflect.Method{:name toString, :return-type java.lang.String, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public}} #clojure.reflect.Method{:name registerNatives, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:private :static :native}} #clojure.reflect.Method{:name clone, :return-type java.lang.Object, :declaring-class java.lang.Object, :parameter-types [], :exception-types [java.lang.CloneNotSupportedException], :flags #{:native :protected}} #clojure.reflect.Method{:name notify, :return-type void, :declaring-class java.lang.Object, :parameter-types [], :exception-types [], :flags #{:public :final :native}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long int], :exception-types [java.lang.InterruptedException], :flags #{:public :final}} #clojure.reflect.Method{:name wait, :return-type void, :declaring-class java.lang.Object, :parameter-types [long], :exception-types [java.lang.InterruptedException], :flags #{:public :final :native}}}}
+clj꞉clojurust.test꞉> 
+; Evaluating file: test.clj
+{:bases nil
+ :flags #{:public}
+ :members
+ #{{:name getClass
+    :return-type java.lang.Class
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :final :native}}
+   {:name wait
+    :return-type void
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types [java.lang.InterruptedException]
+    :flags #{:public :final}}
+   {:name finalize
+    :return-type void
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types [java.lang.Throwable]
+    :flags #{:protected}}
+   {:name java.lang.Object
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name equals
+    :return-type boolean
+    :declaring-class java.lang.Object
+    :parameter-types [java.lang.Object]
+    :exception-types []
+    :flags #{:public}}
+   {:name notifyAll
+    :return-type void
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-
+    types []
+    :flags #{:public :final :native}}
+   {:name hashCode
+    :return-type int
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :native}}
+   {:name toString
+    :return-type java.lang.String
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name registerNatives
+    :return-type void
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :static :native}}
+   {:name clone
+    :return-type java.lang.Object
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types [java.lang.CloneNotSupportedException]
+    :flags #{:native :protected}}
+   {:name notify
+    :return-type void
+    :declaring-class java.lang.Object
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :final :native}}
+   {:name wait
+    :return-type void
+    :declaring-class java.lang.Object
+    :parame
+    ter-types [long int]
+    :exception-types [java.lang.InterruptedException]
+    :flags #{:public :final}}
+   {:name wait
+    :return-type void
+    :declaring-class java.lang.Object
+    :parameter-types [long]
+    :exception-types [java.lang.InterruptedException]
+    :flags #{:public :final :native}}}}
+nil
+clj꞉clojurust.test꞉> 
+{:bases
+ #{java.lang.Object
+   java.lang.reflect.Type
+   java.lang.reflect.AnnotatedElement
+   java.io.Serializable
+   java.lang.reflect.GenericDeclaration}
+ :flags #{:public :final}
+ :members
+ #{{:name getDeclaredMethods
+    :return-type java.lang.reflect.Method<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name getPrimitiveClass
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String]
+    :exception-types []
+    :flags #{:static :native}}
+   {:name getProtectionDomain
+    :return-type java.security.ProtectionDomain
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getSimpleName0
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name getNestHost
+    :return-type java.lang.Clas
+    s
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getConstructors
+    :return-type java.lang.reflect.Constructor<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name packageName
+    :type java.lang.String
+    :declaring-class java.lang.Class
+    :flags #{:private :transient}}
+   {:name casAnnotationType
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types
+    [sun.reflect.annotation.AnnotationType
+     sun.reflect.annotation.AnnotationType]
+    :exception-types []
+    :flags #{}}
+   {:name newInstance
+    :return-type java.lang.Object
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types
+    [java.lang.InstantiationException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getClasses
+    :return-type java.lang.Class<>
+    :declaring-class java.l
+    ang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getExecutableTypeAnnotationBytes
+    :return-type byte<>
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.reflect.Executable]
+    :exception-types []
+    :flags #{:static}}
+   {:name addAll
+    :return-type void
+    :declaring-class java.lang.Class
+    :parameter-types [java.util.Collection java.lang.reflect.Field<>]
+    :exception-types []
+    :flags #{:private :static}}
+   {:name forName
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String]
+    :exception-types [java.lang.ClassNotFoundException]
+    :flags #{:public :static}}
+   {:name annotationType
+    :type sun.reflect.annotation.AnnotationType
+    :declaring-class java.lang.Class
+    :flags #{:private :transient :volatile}}
+   {:name getMethods
+    :return-type java.lang.reflect.Method<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-ty
+    pes [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name classValueMap
+    :type java.lang.ClassValue$ClassValueMap
+    :declaring-class java.lang.Class
+    :flags #{:transient}}
+   {:name getDeclaredMethod
+    :return-type java.lang.reflect.Method
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String java.lang.Class<>]
+    :exception-types
+    [java.lang.NoSuchMethodException java.lang.SecurityException]
+    :flags #{:varargs :public}}
+   {:name getDeclaredConstructor
+    :return-type java.lang.reflect.Constructor
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class<>]
+    :exception-types
+    [java.lang.NoSuchMethodException java.lang.SecurityException]
+    :flags #{:varargs :public}}
+   {:name getResourceAsStream
+    :return-type java.io.InputStream
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String]
+    :exception-types []
+    :flags #{:public}}
+   {:name name
+    :type java.lang.String
+    :declaring-class
+    java.lang.Class
+    :flags #{:private :transient}}
+   {:name getProtectionDomain0
+    :return-type java.security.ProtectionDomain
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name genericInfo
+    :type sun.reflect.generics.repository.ClassRepository
+    :declaring-class java.lang.Class
+    :flags #{:private :transient :volatile}}
+   {:name ENUM
+    :type int
+    :declaring-class java.lang.Class
+    :flags #{:private :static :final}}
+   {:name getAnnotation
+    :return-type java.lang.annotation.Annotation
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+   {:name java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.ClassLoader java.lang.Class]
+    :exception-types []
+    :flags #{:private}}
+   {:name getEnclosingMethod0
+    :return-type java.lang.Object<>
+    :declaring-class java.lang.Class
+    :parameter
+    -types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name isInstance
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Object]
+    :exception-types []
+    :flags #{:public :native}}
+   {:name getDeclaredConstructors0
+    :return-type java.lang.reflect.Constructor<>
+    :declaring-class java.lang.Class
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:private :native}}
+   {:name getNestHost0
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name getSigners
+    :return-type java.lang.Object<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :native}}
+   {:name asSubclass
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+   {:name setSigners
+    :return-type void
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Object<>]
+    :exception-types []
+    :flags #{:native}}
+   {:name desiredAssertionStatus0
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:private :static :native}}
+   {:name getPackageName
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getClassLoader0
+    :return-type java.lang.ClassLoader
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{}}
+   {:name isAnnotationPresent
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+   {:name SYNTHETIC
+    :type int
+    :declaring-class java.lang.Class
+    :flags #{:private :static :final}}
+   {:name getEnclosingConstru
+    ctor
+    :return-type java.lang.reflect.Constructor
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name isOpenToCaller
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String java.lang.Class]
+    :exception-types []
+    :flags #{:private}}
+   {:name getGenericSignature0
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name ANNOTATION
+    :type int
+    :declaring-class java.lang.Class
+    :flags #{:private :static :final}}
+   {:name getAnnotatedInterfaces
+    :return-type java.lang.reflect.AnnotatedType<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getMethodsRecursive
+    :return-type java.lang.PublicMethods$MethodList
+    :declaring-class java.lang.Class
+    :parameter-t
+    ypes [java.lang.String java.lang.Class<> boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name annotationData
+    :type java.lang.Class$AnnotationData
+    :declaring-class java.lang.Class
+    :flags #{:private :transient :volatile}}
+   {:name getAnnotations
+    :return-type java.lang.annotation.Annotation<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name isSynthetic
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getEnclosingMethod
+    :return-type java.lang.reflect.Method
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name getDeclaredClasses
+    :return-type java.lang.Class<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name
+    getCanonicalName
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getSuperclass
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :native}}
+   {:name getDeclaredFields
+    :return-type java.lang.reflect.Field<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name copyFields
+    :return-type java.lang.reflect.Field<>
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.reflect.Field<>]
+    :exception-types []
+    :flags #{:private :static}}
+   {:name getAnnotatedSuperclass
+    :return-type java.lang.reflect.AnnotatedType
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name reflectionData
+    :type java.lang.ref.SoftReference
+
+    :declaring-class java.lang.Class
+    :flags #{:private :transient :volatile}}
+   {:name getField
+    :return-type java.lang.reflect.Field
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String]
+    :exception-types
+    [java.lang.NoSuchFieldException java.lang.SecurityException]
+    :flags #{:public}}
+   {:name enumConstants
+    :type java.lang.Object<>
+    :declaring-class java.lang.Class
+    :flags #{:private :transient :volatile}}
+   {:name cachedConstructor
+    :type java.lang.reflect.Constructor
+    :declaring-class java.lang.Class
+    :flags #{:private :transient :volatile}}
+   {:name copyConstructors
+    :return-type java.lang.reflect.Constructor<>
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.reflect.Constructor<>]
+    :exception-types []
+    :flags #{:private :static}}
+   {:name newReflectionData
+    :return-type java.lang.Class$ReflectionData
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.ref.SoftReference int]
+    :exception-types []
+    :flags #{:private}}
+   {:name isEnum
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name annotationData
+    :return-type java.lang.Class$AnnotationData
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name getTypeName
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getDeclaredConstructors
+    :return-type java.lang.reflect.Constructor<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name getClassLoader
+    :return-type java.lang.ClassLoader
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getEnumConstantsShared
+    :return-type java.lang.
+    Object<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{}}
+   {:name copyMethods
+    :return-type java.lang.reflect.Method<>
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.reflect.Method<>]
+    :exception-types []
+    :flags #{:private :static}}
+   {:name isLocalOrAnonymousClass
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name isTopLevelClass
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name isLocalClass
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name searchFields
+    :return-type java.lang.reflect.Field
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.reflect.Field<> java.lang.String]
+    :exception-types []
+
+    :flags #{:private :static}}
+   {:name forName0
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types
+    [java.lang.String boolean java.lang.ClassLoader java.lang.Class]
+    :exception-types [java.lang.ClassNotFoundException]
+    :flags #{:private :static :native}}
+   {:name getConstantPool
+    :return-type jdk.internal.reflect.ConstantPool
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:native}}
+   {:name forName
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Module java.lang.String]
+    :exception-types []
+    :flags #{:public :static}}
+   {:name enumConstantDirectory
+    :return-type java.util.Map
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{}}
+   {:name reflectionFactory
+    :type jdk.internal.reflect.ReflectionFactory
+    :declaring-class java.lang.Class
+    :flags #{:private :static}}
+   {:name isMemberClass
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getEnclosingMethodInfo
+    :return-type java.lang.Class$EnclosingMethodInfo
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name toGenericString
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getSimpleName
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getDeclaredPublicMethods
+    :return-type java.util.List
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String java.lang.Class<>]
+    :exception-types []
+    :flags #{:varargs}}
+   {:name reflectionData
+    :return-type java.lang.Class$ReflectionData
+    :declaring-class java.la
+    ng.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name getResource
+    :return-type java.net.URL
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String]
+    :exception-types []
+    :flags #{:public}}
+   {:name privateGetDeclaredConstructors
+    :return-type java.lang.reflect.Constructor<>
+    :declaring-class java.lang.Class
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name getDeclaringClass
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name getSimpleBinaryName0
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name getDeclaringClass0
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :fla
+    gs #{:private :native}}
+   {:name getDeclaredAnnotations
+    :return-type java.lang.annotation.Annotation<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name enumConstantDirectory
+    :type java.util.Map
+    :declaring-class java.lang.Class
+    :flags #{:private :transient :volatile}}
+   {:name getGenericInterfaces
+    :return-type java.lang.reflect.Type<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name searchMethods
+    :return-type java.lang.reflect.Method
+    :declaring-class java.lang.Class
+    :parameter-types
+    [java.lang.reflect.Method<> java.lang.String java.lang.Class<>]
+    :exception-types []
+    :flags #{:private :static}}
+   {:name getAnnotationType
+    :return-type sun.reflect.annotation.AnnotationType
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{}}
+   {:name getDeclaredClasses0
+
+    :return-type java.lang.Class<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name getInterfaces
+    :return-type java.lang.Class<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name EMPTY_CLASS_ARRAY
+    :type java.lang.Class<>
+    :declaring-class java.lang.Class
+    :flags #{:private :static :final}}
+   {:name isPrimitive
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :native}}
+   {:name privateGetPublicFields
+    :return-type java.lang.reflect.Field<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name getModule
+    :return-type java.lang.Module
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name componentType
+    :type java
+    .lang.Class
+    :declaring-class java.lang.Class
+    :flags #{:private :final}}
+   {:name getGenericInfo
+    :return-type sun.reflect.generics.repository.ClassRepository
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name isAnonymousClass
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name hasEnclosingMethodInfo
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name newInstanceCallerCache
+    :type java.lang.Class
+    :declaring-class java.lang.Class
+    :flags #{:private :transient :volatile}}
+   {:name forName
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String boolean java.lang.ClassLoader]
+    :exception-types [java.lang.ClassNotFoundException]
+    :flags #{:public :static}}
+   {:na
+    me getDeclaredAnnotation
+    :return-type java.lang.annotation.Annotation
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+   {:name getDeclaredAnnotationsByType
+    :return-type java.lang.annotation.Annotation<>
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+   {:name allPermDomain
+    :type java.security.ProtectionDomain
+    :declaring-class java.lang.Class
+    :flags #{:private :static}}
+   {:name checkMemberAccess
+    :return-type void
+    :declaring-class java.lang.Class
+    :parameter-types
+    [java.lang.SecurityManager int java.lang.Class boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name getEnclosingClass
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name getDeclaredField
+    :return-type
+    java.lang.reflect.Field
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String]
+    :exception-types
+    [java.lang.NoSuchFieldException java.lang.SecurityException]
+    :flags #{:public}}
+   {:name privateGetDeclaredFields
+    :return-type java.lang.reflect.Field<>
+    :declaring-class java.lang.Class
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name isAnnotation
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getConstructor
+    :return-type java.lang.reflect.Constructor
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class<>]
+    :exception-types
+    [java.lang.NoSuchMethodException java.lang.SecurityException]
+    :flags #{:varargs :public}}
+   {:name arrayContentsEq
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Object<> java.lang.Object<>]
+    :exception-types []
+
+    :flags #{:private :static}}
+   {:name getField0
+    :return-type java.lang.reflect.Field
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String]
+    :exception-types []
+    :flags #{:private}}
+   {:name toString
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getSimpleBinaryName
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name getRawTypeAnnotations
+    :return-type byte<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:native}}
+   {:name getCanonicalName0
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name privateGetDeclaredMethods
+    :return-type java.lang.reflect.Method<>
+    :declaring-class java.la
+    ng.Class
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name getDeclaredMethods0
+    :return-type java.lang.reflect.Method<>
+    :declaring-class java.lang.Class
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:private :native}}
+   {:name createAnnotationData
+    :return-type java.lang.Class$AnnotationData
+    :declaring-class java.lang.Class
+    :parameter-types [int]
+    :exception-types []
+    :flags #{:private}}
+   {:name isInterface
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :native}}
+   {:name isNestmateOf
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+   {:name toClass
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.reflect.Type]
+    :exception-types []
+    :flags #{:private :stat
+             ic}}
+   {:name cannotCastMsg
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Object]
+    :exception-types []
+    :flags #{:private}}
+   {:name getNestMembers0
+    :return-type java.lang.Class<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name privateGetPublicMethods
+    :return-type java.lang.reflect.Method<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name getDeclaredAnnotationMap
+    :return-type java.util.Map
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{}}
+   {:name serialVersionUID
+    :type long
+    :declaring-class java.lang.Class
+    :flags #{:private :static :final}}
+   {:name getName
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name checkPackageAccess
+    :return-type void
+    :declaring-class java.lang.Class
+    :parameter-types
+    [java.lang.SecurityManager java.lang.ClassLoader boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name cast
+    :return-type java.lang.Object
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Object]
+    :exception-types []
+    :flags #{:public}}
+   {:name getPackage
+    :return-type java.lang.Package
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name isArray
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :native}}
+   {:name resolveName
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String]
+    :exception-types []
+    :flags #{:private}}
+   {:name classRedefinedCount
+    :type int
+    :declaring-class java.lang.Class
+    :flags #{:pri
+             vate :transient :volatile}}
+   {:name getRawAnnotations
+    :return-type byte<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:native}}
+   {:name getEnumConstants
+    :return-type java.lang.Object<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name methodToString
+    :return-type java.lang.String
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String java.lang.Class<>]
+    :exception-types []
+    :flags #{:private}}
+   {:name getConstructor0
+    :return-type java.lang.reflect.Constructor
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class<> int]
+    :exception-types [java.lang.NoSuchMethodException]
+    :flags #{:private}}
+   {:name getInterfaces
+    :return-type java.lang.Class<>
+    :declaring-class java.lang.Class
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name getFactory
+    :re
+    turn-type sun.reflect.generics.factory.GenericsFactory
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name isAssignableFrom
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public :native}}
+   {:name registerNatives
+    :return-type void
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :static :native}}
+   {:name getReflectionFactory
+    :return-type jdk.internal.reflect.ReflectionFactory
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :static}}
+   {:name serialPersistentFields
+    :type java.io.ObjectStreamField<>
+    :declaring-class java.lang.Class
+    :flags #{:private :static :final}}
+   {:name getDeclaredFields0
+    :return-type java.lang.reflect.Field<>
+    :declaring-class java.lang.Class
+    :parameter-type
+    s [boolean]
+    :exception-types []
+    :flags #{:private :native}}
+   {:name getGenericSuperclass
+    :return-type java.lang.reflect.Type
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getNestMembers
+    :return-type java.lang.Class<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name desiredAssertionStatus
+    :return-type boolean
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getFields
+    :return-type java.lang.reflect.Field<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types [java.lang.SecurityException]
+    :flags #{:public}}
+   {:name getComponentType
+    :return-type java.lang.Class
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getMethod
+    :return-type java.lang.re
+    flect.Method
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String java.lang.Class<>]
+    :exception-types
+    [java.lang.NoSuchMethodException java.lang.SecurityException]
+    :flags #{:varargs :public}}
+   {:name getTypeParameters
+    :return-type java.lang.reflect.TypeVariable<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getAnnotationsByType
+    :return-type java.lang.annotation.Annotation<>
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+   {:name getMethod0
+    :return-type java.lang.reflect.Method
+    :declaring-class java.lang.Class
+    :parameter-types [java.lang.String java.lang.Class<>]
+    :exception-types []
+    :flags #{:private}}
+   {:name module
+    :type java.lang.Module
+    :declaring-class java.lang.Class
+    :flags #{:private :transient}}
+   {:name initClassName
+    :return-type java.lang.String
+
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name getInterfaces0
+    :return-type java.lang.Class<>
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name getModifiers
+    :return-type int
+    :declaring-class java.lang.Class
+    :parameter-types []
+    :exception-types []
+    :flags #{:public :native}}}}
+nil
+clj꞉clojurust.test꞉> 
+java.lang.Class
+clj꞉clojurust.test꞉> 
+[]
+clj꞉clojurust.test꞉> 
+[#object[java.lang.reflect.Field 0xa24df52 "private static final int java.lang.Class.ANNOTATION"]
+ #object[java.lang.reflect.Field 0x5fbe36d0 "private static final int java.lang.Class.ENUM"]
+ #object[java.lang.reflect.Field 0x38c12f03 "private static final int java.lang.Class.SYNTHETIC"]
+ #object[java.lang.reflect.Field 0x10a5c93b "private transient volatile java.lang.reflect.Constructor java.lang.Class.cachedConstructor"]
+ #object[java.lang.reflect.Field 0x68ab6ce0 "private transient volatile java.lang.Class java.lang.Class.newInstanceCallerCache"]
+ #object[java.lang.reflect.Field 0x427bc097 "private transient java.lang.String java.lang.Class.name"]
+ #object[java.lang.reflect.Field 0x73f346ec "private transient java.lang.Module java.lang.Class.module"]
+ #object[java.lang.reflect.Field 0x4d21b5b8 "private transient java.lang.String java.lang.Class.packageName"]
+ #object[java.lang.reflect.Field 0x7e5e1c90 "private final java.lang.Class java.lang.Class.componentType"]
+ #object[java.lang.reflect.Field 0x62bd04b4 "private static java.security.ProtectionDomain java.lang.Class.allPermDomain"]
+ #object[java.lang.reflect.Field 0xb90ea29 "private transient volatile java.lang.ref.SoftReference java.lang.Class.reflectionData"]
+ #object[java.lang.reflect.Field 0x4b5c0296 "private transient volatile int java.lang.Class.classRedefinedCount"]
+ #object[java.lang.reflect.Field 0x45e83df1 "private transient volatile sun.reflect.generics.repository.ClassRepository java.lang.Class.genericInfo"]
+ #object[java.lang.reflect.Field 0x4ffa195c "private static final java.lang.Class[] java.lang.Class.EMPTY_CLASS_ARRAY"]
+ #object[java.lang.reflect.Field 0x43377328 "private static final long java.lang.Class.serialVersionUID"]
+ #object[java.lang.reflect.Field 0x6854816a "private static final java.io.ObjectStreamField[] java.lang.Class.serialPersistentFields"]
+ #object[java.lang.reflect.Field 0x6cd73e24 "private static jdk.internal.reflect.ReflectionFactory java.lang.Class.reflectionFactory"]
+ #object[java.lang.reflect.Field 0x7378ea1b "private transient volatile java.lang.Object[] java.lang.Class.enumConstants"]
+ #object[java.lang.reflect.Field 0xb2e796f "private transient volatile java.util.Map java.lang.Class.enumConstantDirectory"]
+ #object[java.lang.reflect.Field 0x47bde6b1 "private transient volatile java.lang.Class$AnnotationData java.lang.Class.annotationData"]
+ #object[java.lang.reflect.Field 0x12ced67c "private transient volatile sun.reflect.annotation.AnnotationType java.lang.Class.annotationType"]
+ #object[java.lang.reflect.Field 0x2652ce0c "transient java.lang.ClassValue$ClassValueMap java.lang.Class.classValueMap"]]
+clj꞉clojurust.test꞉> 
+; Syntax error compiling at (src/clojurust/test.clj:7:21).
+; No such var: ref/Field
+clj꞉clojurust.test꞉> 
+#object["[Ljava.lang.reflect.Field;" 0x4c3b1d38 "[Ljava.lang.reflect.Field;@4c3b1d38"]
+clj꞉clojurust.test꞉> 
+{:bases #{java.lang.reflect.AccessibleObject java.lang.reflect.Member}
+ :flags #{:public :final}
+ :members
+ #{{:name checkCanSetAccessible
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{}}
+   {:name getGenericInfo
+    :return-type sun.reflect.generics.repository.FieldRepository
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name set
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name declaredAnnotations
+    :return-type java.util.Map
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name getType
+    :return-type java.lang.Class
+    :declaring-cla
+    ss java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name isSynthetic
+    :return-type boolean
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getShort
+    :return-type short
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name setDouble
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object double]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getFieldAccessor
+    :return-type jdk.internal.reflect.FieldAccessor
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types [java.lang.IllegalAccessException]
+    :flags #{:private}}
+   {:name root
+    :type java.lang.reflect.Field
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name setShort
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object short]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getRoot
+    :return-type java.lang.reflect.Field
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{}}
+   {:name getAnnotatedType
+    :return-type java.lang.reflect.AnnotatedType
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name setBoolean
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object boolean]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getFieldAccessor
+    :return-type jdk.internal.reflect.FieldAccessor
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name setFieldAccessor
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [jdk.internal.reflect.FieldAccessor boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name type
+    :type java.lang.Class
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name getByte
+    :return-type byte
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name setByte
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object byte]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getFactory
+    :return-type sun.reflect.generics.factory.GenericsFactory
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:private}}
+   {:name signature
+    :type java.lang.String
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private :transient}}
+   {:name getGenericType
+    :return-type java.lang.reflect.Type
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getInt
+    :return-type int
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name clazz
+    :type java.lang.Class
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name setInt
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.l
+                      ang.Object int]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getBoolean
+    :return-type boolean
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getDeclaringClass
+    :return-type java.lang.Class
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getRoot
+    :return-type java.lang.reflect.AccessibleObject
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:bridge :synthetic}}
+   {:name genericInfo
+    :type sun.reflect.generics.repository.FieldRepository
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private :transient}}
+   {:name toShortString
+    :return-type java.lang.String
+    :declaring-cl
+    ass java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{}}
+   {:name get
+    :return-type java.lang.Object
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name java.lang.reflect.Field
+    :declaring-class java.lang.reflect.Field
+    :parameter-types
+    [java.lang.Class
+     java.lang.String
+     java.lang.Class
+     int
+     int
+     java.lang.String
+     byte<>]
+    :exception-types []
+    :flags #{}}
+   {:name getDeclaredAnnotations
+    :return-type java.lang.annotation.Annotation<>
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name annotations
+    :type byte<>
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name setLong
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+
+    :parameter-types [java.lang.Object long]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name copy
+    :return-type java.lang.reflect.Field
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{}}
+   {:name acquireFieldAccessor
+    :return-type jdk.internal.reflect.FieldAccessor
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:private}}
+   {:name modifiers
+    :type int
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name getTypeAnnotationBytes0
+    :return-type byte<>
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:private :native}}
+   {:name getGenericSignature
+    :return-type java.lang.String
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:priva
+             te}}
+   {:name name
+    :type java.lang.String
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name setChar
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object char]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name toString
+    :return-type java.lang.String
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getChar
+    :return-type char
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getAnnotationsByType
+    :return-type java.lang.annotation.Annotation<>
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+
+   {:name hashCode
+    :return-type int
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getLong
+    :return-type long
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name getFloat
+    :return-type float
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name overrideFieldAccessor
+    :type jdk.internal.reflect.FieldAccessor
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name getDouble
+    :return-type double
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang
+     .IllegalAccessException]
+    :flags #{:public}}
+   {:name slot
+    :type int
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name setAccessible
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [boolean]
+    :exception-types []
+    :flags #{:public}}
+   {:name getName
+    :return-type java.lang.String
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name fieldAccessor
+    :type jdk.internal.reflect.FieldAccessor
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private}}
+   {:name checkAccess
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Class java.lang.Object]
+    :exception-types [java.lang.IllegalAccessException]
+    :flags #{:private}}
+   {:name declaredAnnotations
+    :type java.util.Map
+    :declaring-class java.lang.reflect.Field
+    :flags #{:private :transient :volatile}}
+   {:name
+    getAnnotation
+    :return-type java.lang.annotation.Annotation
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Class]
+    :exception-types []
+    :flags #{:public}}
+   {:name setFloat
+    :return-type void
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object float]
+    :exception-types
+    [java.lang.IllegalArgumentException
+     java.lang.IllegalAccessException]
+    :flags #{:public}}
+   {:name equals
+    :return-type boolean
+    :declaring-class java.lang.reflect.Field
+    :parameter-types [java.lang.Object]
+    :exception-types []
+    :flags #{:public}}
+   {:name toGenericString
+    :return-type java.lang.String
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name isEnumConstant
+    :return-type boolean
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}
+   {:name getModifiers
+    :retu
+    rn-type int
+    :declaring-class java.lang.reflect.Field
+    :parameter-types []
+    :exception-types []
+    :flags #{:public}}}}
+nil
+clj꞉clojurust.test꞉> 
