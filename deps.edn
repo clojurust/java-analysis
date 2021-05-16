@@ -1,5 +1,6 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.10.3"}}
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        org.reflections/reflections {:mvn/version "0.9.12"}}
  :aliases
  {:run-m {:main-opts ["-m" "clojurust.java-analysis"]}
   :run-x {:ns-default clojurust.java-analysis
