@@ -1,13 +1,9 @@
 (ns clojurust.test)
 
-(require '[clojure.reflect :as r])
-(require '[clojure.pprint :as p])
-;;; (import org.reflections.reflections Reflection)
+(comment (pprint (reflect java.lang.reflect.Field)))
 
-(comment (p/pprint (r/reflect java.lang.reflect.Field)))
-
-(defn p [obj] (p/pprint obj))
-(defn pt [obj] (p/print-table obj))
+(defn p [obj] (pprint obj))
+(defn pt [obj] (print-table obj))
 
 (def xref {:interface {}
            :abstract {}
@@ -23,7 +19,7 @@
 
 (defn po [obj]
   {obj
-   (r/reflect obj)})
+   (reflect obj)})
 
 
 ;;(println "-----------------------------")
@@ -38,3 +34,19 @@
 
 ;;; (doseq [p (.getURLs (java.lang.ClassLoader/getSystemClassLoader))] (println (.getPath p)))
 (p (loaded-libs))
+
+(defn get-name
+  [file]
+  (io/resource file))
+
+(map get-name (cp/system-classpath))
+
+(import (java.io File))
+
+(import (java.util.jar JarFile JarEntry))
+
+(filter #(pos?
+          (index-of (.getPath %) "clojure-"))
+        (filter jar-file? (system-classpath)))
+
+(index-of (.getPath (first (filter jar-file? (system-classpath)))) "cider")
