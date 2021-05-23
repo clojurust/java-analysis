@@ -5,7 +5,7 @@
 (require '[clojure.pprint :as pp])
 (require '[clojure.string :as string])
 (require '[clojure.java.classpath :as cp])
-(use '[clojure.java.shell :only [sh]])
+(require '[clojure.java.shell :only [sh]])
 
 (defn p [obj] (pp/pprint obj) obj)
 
