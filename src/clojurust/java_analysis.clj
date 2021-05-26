@@ -1,11 +1,11 @@
 (ns clojurust.java-analysis
-  (:gen-class))
-
-(require '[clojure.reflect :as re])
-(require '[clojure.pprint :as pp])
-(require '[clojure.string :as string])
-(require '[clojure.java.classpath :as cp])
-(require '[clojure.java.shell :only [sh]])
+  (:gen-class)
+  (:require [clojure.java.io :as io]
+            [clojure.reflect :as re]
+            [clojure.pprint :as pp]
+            [clojure.string :as string]
+            [clojure.java.classpath :as cp]
+            [clojure.java.shell :as sh]))
 
 (defn p [obj] (pp/pprint obj) obj)
 
@@ -20,14 +20,15 @@
   (greet {:name (first args)}))
 
 
-(defn jar [jar-name] (first (filter #(pos-int?
-                                      (string/index-of (.getPath %) jar-name))
-                                    (filter cp/jar-file? (cp/system-classpath)))))
-
+(defn jar
+  [jar-name]
+  (first (filter #(pos-int?
+                   (string/index-of (.getPath %) jar-name))
+                 (filter cp/jar-file? (cp/system-classpath)))))
 
 (defn get-all-classes
-  [jar]
-  (seq (string/split (:out (sh "jar" "tf" (str jar))) #"\n")))
+  [jar-name]
+  (seq (string/split (:out (sh/sh "jar" "tf" (str jar-name))) #"\n")))
 
 (defn filter-path
   [classes path]
@@ -35,19 +36,47 @@
             (string/starts-with? % path)
             (string/ends-with? % ".class")) classes))
 
-(defn decode
+(defn trim-name
+  [cl path]
+  (-> cl
+      (string/replace path "")
+      (string/replace ".class" "")
+      keyword))
+
+(defn trim-class
   [cl]
-  [cl (re/reflect (read-string cl))])
+  (-> cl
+      (string/replace ".class" "")
+      (string/replace "/" ".")
+      ;; (string/replace "$" ".")
+      ))
+
+(defn decode
+  [cl path]
+  [(trim-name cl path) (re/reflect (eval (Class/forName (trim-class cl))))])
 
 (defn generate
-  [classes]
-  (map #(decode %) classes))
+  [classes path]
+  (into {} (map #(decode % path) classes)))
 
-(defn execute []
-  (-> "clojure-"
-      jar
-      get-all-classes
-      (filter-path "clojure/lang/")
-      generate))
+(defn execute
+  [& {:keys [jar-name path cl]
+      :or {jar-name "clojure-" path "clojure/lang/" cl ""}
+      :as args}]
+  (println args)
+  (->
+   jar-name
+   jar
+   get-all-classes
+   (filter-path (str path cl))
+   (generate path)))
 
-(p (execute))
+(comment
+  (execute
+   :jar-name "clojure-"
+   :path "clojure/lang/"
+   :cl "APersistentMap")
+  (spit "res.edn" (execute))
+  (clojure.pprint/pprint (execute) (io/writer "res.edn"))
+  ;;
+  )
