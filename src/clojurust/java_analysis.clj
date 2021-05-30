@@ -3,6 +3,7 @@
   (:require [clojure.java.io :as io]
             [clojure.reflect :as re]
             [clojure.pprint :as pp]
+            [clojure.set :as set]
             [clojure.string :as string]
             [clojure.java.classpath :as cp]
             [clojure.java.shell :as sh]))
@@ -36,13 +37,6 @@
             (string/starts-with? % path)
             (string/ends-with? % ".class")) classes))
 
-(defn trim-name
-  [cl path]
-  (-> cl
-      (string/replace path "")
-      (string/replace ".class" "")
-      keyword))
-
 (defn trim-class
   [cl]
   (-> cl
@@ -52,12 +46,31 @@
       ))
 
 (defn decode
-  [cl path]
-  [(trim-name cl path) (re/reflect (eval (Class/forName (trim-class cl))))])
+  [cl]
+  [(trim-class cl) (re/reflect (eval (Class/forName (trim-class cl))))])
 
 (defn generate
-  [classes path]
-  (into {} (map #(decode % path) classes)))
+  [classes]
+  (into {} (map #(decode %) classes)))
+
+(defn loop-obj
+  [class-map]
+  (loop [class-ref (vals class-map)
+         objs #{}]
+    (if-let [cl (first class-ref)]
+      (do
+        (loop [elems (seq (:members cl))
+               objs objs]
+          (if-let [elem (first elems)]
+            (let [ret (:return-type elem)
+                  ret (if ret #{ret} #{})
+                  param (into #{} (:parameter-types elem))
+                  except (into #{} (:exception-types elem))]
+              (p (:name elem))
+              (recur (next elems) (set/union objs ret param except)))))
+        (recur (next class-ref) objs))
+      (set/difference objs (into #{} (keys class-map))))))
+
 
 (defn execute
   [& {:keys [jar-name path cl]
@@ -69,13 +82,17 @@
    jar
    get-all-classes
    (filter-path (str path cl))
-   (generate path)))
+   generate
+   loop-obj))
 
 (comment
   (execute
    :jar-name "clojure-"
    :path "clojure/lang/"
    :cl "APersistentMap")
+  (execute
+   :jar-name "clojure-"
+   :path "clojure/lang/")
   (spit "res.edn" (execute))
   (clojure.pprint/pprint (execute) (io/writer "res.edn"))
   ;;
