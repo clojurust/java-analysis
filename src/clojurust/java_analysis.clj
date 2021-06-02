@@ -67,7 +67,6 @@
 (defn loop-members
   "Manage members of class to find undefined objects"
   [cl objs keys-names]
-  (p (:name cl))
   (loop [elems (seq (:members cl))
          objs objs]
     (if-let [elem (first elems)]
@@ -85,30 +84,34 @@
   (let [keys-names (into #{} (keys class-map))]
     (loop [class-ref (seq class-map)
            objs #{}]
-      (if-let [cl (val class-ref)]
-        (let [objs (set/union objs (loop-members cl objs keys-names))]
-          (println cl)
+      (if-let [cl (first class-ref)]
+        (let [objs (set/union objs (loop-members (cl 1) objs keys-names))]
+          (println (cl 0))
           (recur (next class-ref) objs))
         (set/difference objs keys-names)))))
 
 (defn execute
   "Main execution of analysis acording to optionals `jar-name`, `path` in the jar and `class`"
   [jar-name path cl]
+  (println jar-name path cl)
   (->
    jar-name
+   p
    jar
+   p
    get-all-classes
    (filter-path (str path cl))
    generate
    loop-obj
-   p))
+   p)
+  nil)
 
 (defn analysis
   "Callable entry point to the application."
   [& {:keys [jar-name path cl]
       :or {jar-name "clojure-" path "clojure/lang/" cl ""}
       :as args}]
-  (println args)
+  (println args jar-name path cl)
   (execute jar-name path cl))
 
 (comment

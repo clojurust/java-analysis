@@ -6,7 +6,7 @@ Decode clojure core library and base Java Functions.
 
 * [X] Read clojure.lang classes and interfaces.
 * [X] Get Classes and interfaces infos.
-* [ ] Get other jars objects Classes and interface.
+* [X] Get other jars objects Classes and interface.
 * [ ] Get other jars objects Classes and interface information.
 * [ ] Recurse until all objects are decoded.
 * [ ] Sort all data by files definition for objects and interfaces.
