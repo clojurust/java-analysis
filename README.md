@@ -1,6 +1,25 @@
 # java-analysis
 
-Decode clojure core library and base Java Functions.
+Decode clojure.lang library and base Java Functions. 
+
+This is part of the [Clojurust](https://github.com/clojurust) project.
+
+This can be extended for any jar and classes in order to have an interface description to automagically make a wrapper for other languages (Clojure, Rust, ...)
+
+The generated files are a hierachy of files in a similar structure as the jar. File are the base Class or Interface with an _.edn_ extension.
+
+$ subclasses are in the file with base class name. For example:
+
+* path/Class.edn
+  * Class
+  * Class$Subclass1
+  * Class$Subclass$Subclass2
+  * Class$Subclass3
+* path/Class2.edn
+  * Class2
+  * Class2$Subclass21 
+  * Class2$Subclass21$Subclass22 
+  * Class2$Subclass31
 
 ## TODO
 

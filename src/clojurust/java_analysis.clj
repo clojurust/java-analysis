@@ -64,18 +64,23 @@
   [classes]
   (into {} (map #(decode %) classes)))
 
+(defn norm-obj-name
+  [obj]
+  (string/replace (str obj) "<>" ""))
+
 (defn loop-members
   "Manage members of class to find undefined objects"
   [cl objs keys-names]
   (loop [elems (seq (:members cl))
          objs objs]
     (if-let [elem (first elems)]
-      (let [ret (:return-type (str elem))
+      (let [ret (:return-type (norm-obj-name elem))
             ret (if ret #{ret} #{})
-            param (into #{} (map str (:parameter-types elem)))
-            except (into #{} (map str (:exception-types elem)))]
-        (str :ret ret :param param :except except)
-        (recur (next elems) (set/difference (set/union objs ret param except) keys-names)))
+            param (into #{} (map norm-obj-name (:parameter-types elem)))
+            except (into #{} (map norm-obj-name (:exception-types elem)))]
+        (recur (next elems)
+               (set/difference
+                (set/union objs ret param except) keys-names)))
       objs)))
 
 (defn loop-obj
