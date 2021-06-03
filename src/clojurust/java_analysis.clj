@@ -66,7 +66,17 @@
 
 (defn norm-obj-name
   [obj]
-  (string/replace (str obj) "<>" ""))
+  (let [s (string/replace (str obj) "<>" "")
+        s (if (= s "int")
+            "java.lang.Integer"
+            s)
+        s (if (= s "char")
+            "java.lang.Character"
+            s)
+        s (if (string/includes? s ".")
+            s
+            (str "java.lang." (string/capitalize s)))]
+    s))
 
 (defn loop-members
   "Manage members of class to find undefined objects"
@@ -85,15 +95,24 @@
 
 (defn loop-obj
   "Walk through classes to find undefined objects in members"
-  [class-map]
-  (let [keys-names (into #{} (keys class-map))]
-    (loop [class-ref (seq class-map)
-           objs #{}]
-      (if-let [cl (first class-ref)]
-        (let [objs (set/union objs (loop-members (cl 1) objs keys-names))]
-          (println (cl 0))
-          (recur (next class-ref) objs))
-        (set/difference objs keys-names)))))
+  [class-map keys-names]
+  (loop [class-ref (seq class-map)
+         objs #{}]
+    (if-let [cl (first class-ref)]
+      (let [objs (set/union objs (loop-members (cl 1) objs keys-names))]
+        ;; (println (cl 0))
+        (recur (next class-ref) objs))
+      (set/difference objs keys-names))))
+
+(defn expand
+  [classes prev-desc]
+  (let [new-desc (generate classes)
+        merge-desc (merge prev-desc new-desc)
+        new-objs (loop-obj new-desc (into #{} (keys merge-desc)))]
+    (p new-objs)
+    (if (seq new-objs)
+      (recur new-objs merge-desc)
+      merge-desc)))
 
 (defn execute
   "Main execution of analysis acording to optionals `jar-name`, `path` in the jar and `class`"
@@ -106,10 +125,9 @@
    p
    get-all-classes
    (filter-path (str path cl))
-   generate
-   loop-obj
-   p)
-  nil)
+   (expand {}))
+  ;; nil
+  )
 
 (defn analysis
   "Callable entry point to the application."

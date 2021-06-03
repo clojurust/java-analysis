@@ -26,8 +26,8 @@ $ subclasses are in the file with base class name. For example:
 * [X] Read clojure.lang classes and interfaces.
 * [X] Get Classes and interfaces infos.
 * [X] Get other jars objects Classes and interface.
-* [ ] Get other jars objects Classes and interface information.
-* [ ] Recurse until all objects are decoded.
+* [X] Get other jars objects Classes and interface information.
+* [X] Recurse until all objects are decoded.
 * [ ] Sort all data by files definition for objects and interfaces.
 * [ ] Generate description files in a result file hierarchy.
 
